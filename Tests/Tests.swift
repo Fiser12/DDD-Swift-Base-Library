@@ -1,14 +1,14 @@
 //
-//  IdSpec.swift
-//  CQRS Swift Library
+//  Tests.swift
+//  Tests
 //
 //  Created by Fiser on 5/5/18.
 //
 
 import XCTest
 
-class IdSpec: XCTestCase {
-
+class Tests: XCTestCase {
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,7 +18,7 @@ class IdSpec: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
+    
     func testExample() {
         let id1 = IdStub(id: "1");
         let id2 = IdStub(id: "2");
@@ -34,7 +34,6 @@ class IdSpec: XCTestCase {
 
 struct IdStub : Id
 {
-    
     var id: String
 }
 
