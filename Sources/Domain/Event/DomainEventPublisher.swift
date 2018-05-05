@@ -5,8 +5,6 @@
 //  Created by Fiser on 5/5/18.
 //
 
-import Foundation
-
 final class DomainEventPublisher
 {
     public static let instance:DomainEventPublisher = DomainEventPublisher()
