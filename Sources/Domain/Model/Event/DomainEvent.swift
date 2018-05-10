@@ -13,11 +13,11 @@ public protocol DomainEvent
 
 public struct PublishableDomainEvent : DomainEvent
 {
-    public private(set) var aggregateId:Id
+    public private(set) var aggregateId:AggregateRootId
     public private(set) var name:String
     public private(set) var event:DomainEvent
 
-    init(aggregateId:Id, name:String, event:DomainEvent) {
+    init(aggregateId:AggregateRootId, name:String, event:DomainEvent) {
         self.aggregateId = aggregateId
         self.name = name
         self.event = event

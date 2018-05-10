@@ -7,8 +7,7 @@
 
 public protocol AggregateRoot
 {
-
-    var id:Id {get}
+    var id:AggregateRootId {get}
     var recordedEvent: [DomainEvent] {get}
     mutating func clearEvents();
     func publish(event:DomainEvent)

@@ -1,14 +1,9 @@
 //
-//  CommandBus.swift
-//  CQRS Swift Library
+//  SimpleCommandBus.swift
+//  Application
 //
-//  Created by Fiser on 4/5/18.
+//  Created by Fiser on 7/5/18.
 //
-
-public protocol CommandBus
-{
-    func handle(command:Any) throws
-}
 
 public class SimpleCommandBus : CommandBus
 {
@@ -18,11 +13,11 @@ public class SimpleCommandBus : CommandBus
         self.messageBus = messageBus
     }
     
-    public func handle(command:Any) throws {
+    public func handle(command:Command) throws {
         do{
             try self.messageBus.handle(message: command)
         } catch {
-            //TODO lanzar los eventos para detectar que una operación de modificación ha salido mal
+
         }
     }
 }

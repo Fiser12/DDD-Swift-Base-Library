@@ -1,14 +1,10 @@
-//
-//  CommandBus.swift
-//  CQRS Swift Library
-//
-//  Created by Fiser on 4/5/18.
-//
 
-public protocol EventBus
-{
-    func publish(events:DomainEvent...) throws
-}
+//
+//  SimpleEventBus.swift
+//  Application
+//
+//  Created by Fiser on 7/5/18.
+//
 
 public class SimpleEventBus : EventBus
 {

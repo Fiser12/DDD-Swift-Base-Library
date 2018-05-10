@@ -12,6 +12,16 @@ public protocol Id
     var id:String {get}
 }
 
+public protocol AggregateRootId : Id
+{
+    
+}
+
+public protocol EntityId : Id
+{
+    
+}
+
 extension Id {
     init(id:String?) {
         let id = id != nil ? id : UUID().uuidString
